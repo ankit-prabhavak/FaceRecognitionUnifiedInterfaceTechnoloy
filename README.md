@@ -13,34 +13,34 @@ Face Recognition: Uses the face_recognition library to generate unique face enco
 Session Management: Secure session handling to keep users logged in across pages and ensure secure logouts.
 Image Handling: Proper security measures to sanitize and restrict image uploads.
 Project Structure
-
-flask_app/
+<p>
+flask_app/<br>
 │
-├── app.py                # Main Flask app file with all routes and application logic
-├── templates/            # HTML templates for UI pages (home, login, registration, etc.)
-│   ├── home.html         # Home page
-│   ├── login.html        # Login page (includes username/password and face recognition)
-│   ├── register.html     # User registration page
-│   └── welcome.html      # Welcome page after login
+├── app.py                # Main Flask app file with all routes and application logic<br>
+├── templates/            # HTML templates for UI pages (home, login, registration, etc.)<br>
+│   ├── home.html         # Home page<br>
+│   ├── login.html        # Login page (includes username/password and face recognition)<br>
+│   ├── register.html     # User registration page<br>
+│   └── welcome.html      # Welcome page after login<br><br>
 │
-├── static/               # Static files (images, CSS, JavaScript)
-│   ├── images/           # Folder where user profile images are stored
-│   ├── js/               # JavaScript files
-│   │   └── camera.js     # Script for capturing images from the webcam
-│   ├── Home.css          # CSS for the home page
-│   ├── Login.css         # CSS for the login page
-│   ├── Logout.css        # CSS for the logout page
-│   ├── RegisterPage.css  # CSS for the registration page
-│   ├── Welcome.css       # CSS for the welcome page
-│   ├── TitleLogo.ico     # Favicon for the application
-│   └── Logo.jpg          # Logo for the application
+├── static/               # Static files (images, CSS, JavaScript)<br>
+│   ├── images/           # Folder where user profile images are stored<br>
+│   ├── js/               # JavaScript files<br>
+│   │   └── camera.js     # Script for capturing images from the webcam<br>
+│   ├── Home.css          # CSS for the home page<br>
+│   ├── Login.css         # CSS for the login page<br>
+│   ├── Logout.css        # CSS for the logout page<br>
+│   ├── RegisterPage.css  # CSS for the registration page<br>
+│   ├── Welcome.css       # CSS for the welcome page<br>
+│   ├── TitleLogo.ico     # Favicon for the application<br>
+│   └── Logo.jpg          # Logo for the application<br><br>
 │
-├── instance/             # Folder containing SQLite database
-│   └── users.db          # SQLite database file containing user data (username, password, face encoding)
+├── instance/             # Folder containing SQLite database<br>
+│   └── users.db          # SQLite database file containing user data (username, password, face encoding)<br><br>
 │
-├── requirements.txt      # List of Python dependencies
-└── README.md     
-
+├── requirements.txt      # List of Python dependencies<br>
+└── README.md<br>
+</p>
 Requirements
 
 Flask: Lightweight WSGI web application framework.
