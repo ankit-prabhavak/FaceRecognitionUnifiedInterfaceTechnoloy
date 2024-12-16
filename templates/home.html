@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/Home.css">
+    <link rel="icon" type="image/png" href="/static/TitleLogo.ico">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Add logo image here -->
+        <img class="logo" src="/static/Logo.jpg" alt="FRUIT Logo" class="logo">
+
+        <h1><b>FACE RECOGNITION UNIFIED INTERFACE TECHNOLOGY AND SERVICES (FRUITS)</b></h1>
+
+        <p>
+            <a href="{{ url_for('login') }}">Login</a>
+            <br>
+            <a href="{{ url_for('register') }}">Register</a>
+        </p>
+    </div>
+</body>
+
+</html>

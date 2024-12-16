@@ -1,0 +1,101 @@
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,
+                    #F8EDE3 0%,
+                    #7776B3 30%,
+                    #9B86BD 60%,
+                    #E2BBE9 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Header styling */
+        h1 {
+            color: whitesmoke;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        /* Form container styling */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        /* Form input styling */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #0a66c2;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #004182;
+        }
+
+        /* Video and Canvas styling */
+        video {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        canvas {
+            display: none;
+        }
+
+        /* Link styling */
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 14px;
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Button to toggle login modes */
+        .toggle-button {
+            background-color: #32be39;
+            color: white;
+            padding: 8px 15px;
+            /* Reduced padding for a smaller button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            /* Reduced font size */
+            width: 10%;
+            /* Makes the button take the full width of its parent container */
+            box-sizing: content-box;
+            /* Ensures the padding doesn't add extra width */
+        }
+
+        .toggle-button:hover {
+            background-color: #4caf50;
+        }

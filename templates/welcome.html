@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/welcome.css">
+    <link rel="icon" type="image/png" href="/static/TitleLogo.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome {{ user.username }}!</h1>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Branch:</strong> {{ user.branch }}</p>
+        <p><strong>Roll Number:</strong> {{ user.roll_number }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Profile Image:</strong> <img id="" src="{{ url_for('static', filename='images/' + user.username + '_profile.png') }}" alt="Profile Image"></p>
+        <div class="link-container">
+            <a href="{{ url_for('home') }}">Go to home</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

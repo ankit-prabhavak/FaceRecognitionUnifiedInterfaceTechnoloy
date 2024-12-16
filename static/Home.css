@@ -1,0 +1,109 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,
+            #F8EDE3 0%,
+            #7776B3 30%,
+            #9B86BD 60%,
+            #E2BBE9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Add shadow behind the logo */
+}
+
+
+/* Container for content */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 450px;
+    /* Increased width for better content distribution */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* More subtle shadow */
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    /* Slight lift effect on hover */
+}
+
+h1 {
+    color: rgb(192, 112, 192);
+    /* Professional red tone */
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-family: "Agu Display", serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Styling for the links */
+a {
+    color: #ff8585;
+    /* LinkedIn-like color for the links */
+    font-size: 23px;
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect for links */
+a:hover {
+    border-color: #023b1b;
+    color: #fb5f5f;
+    /* Darker shade on hover */
+}
+
+/* Extra spacing for the paragraph */
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Style for the logo */
+.logo {
+    width: 150px;
+    /* Set the width of the logo */
+    height: 150px;
+    /* Ensure the logo is a square */
+    object-fit: cover;
+    /* Ensures the logo fits properly */
+    border-radius: 50%;
+    /* Makes the logo circular */
+    margin-bottom: 10px;
+    /* Space between the logo and the header */
+    border: 5px solid #fff;
+    /* Optional: Adds a white border around the logo */
+}

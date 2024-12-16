@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/Login.css">
+    <link rel="icon" type="image/png" href="/static/TitleLogo.ico">
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <!-- Button to toggle between login modes -->
+    <button class="toggle-button" onclick="toggleLoginMode()">Login via Face</button>
+
+    <!-- Credential Login Form -->
+    <form action="{{ url_for('login') }}" method="POST" id="credential_login_form" style="display:block;">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+        </div>
+        <button type="submit">Login with Credentials</button>
+    </form>
+
+    <!-- Face Login Form -->
+    <form action="{{ url_for('login') }}" method="POST" id="face_login_form" style="display:none;">
+        <button type="button" onclick="startCamera()">Start Camera</button>
+        <video id="video" width="320" height="240" autoplay></video>
+        <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+        <br>
+        <button type="button" onclick="captureImage()">Capture Image for Face Login</button>
+        <input type="hidden" id="image_data" name="image_data">
+    </form>
+
+    <a href="{{ url_for('register') }}">Don't have an account? Register</a>
+
+    <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+    <script>
+        // Toggle between credential login and face login
+        function toggleLoginMode() {
+            var credentialForm = document.getElementById('credential_login_form');
+            var faceForm = document.getElementById('face_login_form');
+            if (credentialForm.style.display === 'none') {
+                credentialForm.style.display = 'block';
+                faceForm.style.display = 'none';
+            } else {
+                credentialForm.style.display = 'none';
+                faceForm.style.display = 'block';
+            }
+        }
+
+        // Start webcam for face login
+        function startCamera() {
+            var video = document.getElementById('video');
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+
+            // Get access to the user's webcam
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                })
+                .catch(function (error) {
+                    alert("Could not access webcam");
+                });
+        }
+
+        // Capture the current image from the webcam for face login
+        function captureImage() {
+            var video = document.getElementById('video');
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Convert the canvas image to base64
+            var dataURL = canvas.toDataURL('image/png');
+
+            // Pass the base64 data to a hidden form field
+            document.getElementById('image_data').value = dataURL;
+
+            // Check if the image data exists before submitting
+            if (dataURL) {
+                // Optionally, stop the video stream after capturing the image
+                var stream = video.srcObject;
+                var tracks = stream.getTracks();
+                tracks.forEach(function(track) {
+                    track.stop();
+                });
+
+                // Submit the form after capturing the image
+                document.getElementById('face_login_form').submit();
+            } else {
+                alert("No image captured. Please try again.");
+            }
+        }
+    </script>
+    
+</body>
+</html>

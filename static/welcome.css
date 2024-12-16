@@ -1,0 +1,67 @@
+html, body {
+    height: 100%; /* Ensure the gradient background spans the full viewport */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,
+            #F8EDE3 0%,
+            #7776B3 30%,
+            #9B86BD 0%,
+            #E2BBE9 100%);
+    box-sizing: border-box; /* Ensures padding doesn't affect layout dimensions */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 0; /* Remove collapsing margins */
+    padding-top: 30px; /* Use padding instead of margin to space from top */
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+strong {
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto; /* Center the container and create spacing */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 20px;
+}

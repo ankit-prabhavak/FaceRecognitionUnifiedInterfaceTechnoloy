@@ -1,0 +1,103 @@
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,
+                    #F8EDE3 0%,
+                    #7776B3 30%,
+                    #9B86BD 60%,
+                    #E2BBE9 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130vh;
+            flex-direction: column;
+            overflow-x: hidden;
+            /* Prevent horizontal overflow */
+        }
+
+        /* Header styling */
+        h1 {
+            color: whitesmoke;
+            margin-bottom: 0px;
+            font-size: 32px;
+        }
+
+        /* Form container styling */
+        form {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 500px;
+            /* Increased width for better space */
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-sizing: border-box;
+            /* Ensure padding is included in width calculation */
+        }
+
+        /* Form input and textarea styling */
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 50%;
+            padding: 9px;
+            margin-bottom: 1px;
+            border-radius: 2px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+
+        /* Fix for labels overlapping or getting cut */
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Fix for textarea resizing issue */
+        textarea {
+            resize: none;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #0a66c2;
+            color: white;
+            padding: 8px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #004182;
+        }
+
+        /* Camera and video section styling */
+        video {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        canvas {
+            display: none;
+        }
+
+        /* Optional styling for the "Start Camera" and "Capture Image" buttons */
+        button[type="button"] {
+            background-color: #4caf50;
+            color: white;
+            margin-top: 5px;
+        }
+
+        button[type="button"]:hover {
+            background-color: #45a049;
+        }
