@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 import os
-import face_recognition
+import face_recogniti
 import numpy as np
 from werkzeug.utils import secure_filename
 import base64
