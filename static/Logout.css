@@ -1,19 +1,25 @@
-html, body {
-    height: 100%; /* Ensure full height for the gradient background */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+html,
+body {
+    height: 100%;
+    /* Ensure full height for the gradient background */
+    margin: 0;
+    /* Remove default margins */
+    padding: 0;
+    /* Remove default padding */
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg,
             #F8EDE3 0%,
             #7776B3 30%,
-            #9B86BD 60%,
+            #9B86BD 0%,
             #E2BBE9 100%);
 }
 
 /* Add padding to the body to space content from the top */
 body {
-    padding-top: 50px; /* Adjust spacing as needed */
-    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+    padding-top: 50px;
+    /* Adjust spacing as needed */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect layout */
 }
 
 p {
@@ -23,15 +29,19 @@ p {
     width: 50%;
     background-color: whitesmoke;
     text-align: center;
-    margin: 50px auto 0; /* Center horizontally and allow spacing from top */
+    margin: 50px auto 0;
+    /* Center horizontally and allow spacing from top */
     border-radius: 10px;
     /* Updated shadow for container */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow for emphasis */
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 p:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
 }
 
 a {
