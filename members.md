@@ -24,6 +24,6 @@ We are a team of five members working collaboratively on a Flask-based web appli
    - *Contribution*: Assists in creating a responsive and user-friendly interface.
 
 5. *Devashish Tripathi*
-   - *GitHub*: Not Available Yet
+   - *GitHub*: [dev22720](https://github.com/dev22720)
    - *Role*: Tester
    - *Contribution*: Ensures the application is robust and free from bugs through extensive testing.
