@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
+    background: linear-gradient(135deg, #E29578 0%, #83C5BE 30%, #FFDDD2 0%, #006D77 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,17 +15,17 @@ body {
 }
 
 /* Animation for background gradient */
-/* @keyframes gradientAnimation {
+@keyframes fadeIn {
     0% {
-        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
+        opacity: 0;
+        transform: translateY(-30px);
     }
-    50% {
-        background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 30%, #D9EAFD 0%, #F8FAFC 100%);
-    }
+
     100% {
-        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
+        opacity: 1;
+        transform: translateY(0);
     }
-} */
+}
 
 .logo {
     width: 150px;
@@ -92,7 +93,7 @@ body {
 }
 
 h1 {
-    color: #9AA6B2;
+    color: #006D77;
     font-size: 30px;
     margin-bottom: 25px;
     font-family: "Agu Display", serif;
@@ -106,18 +107,18 @@ h1:hover {
 
 @keyframes textHoverAnimation {
     0% {
-        color: #9AA6B2;
+        color: #006D77;
         transform: scale(1);
     }
 
     100% {
-        color: #BCCCDC;
+        color: #83C5BE;
         transform: scale(1.05);
     }
 }
 
 a {
-    color: #BCCCDC;
+    color: #83C5BE;
     font-size: 23px;
     text-decoration: none;
     margin-top: 15px;
@@ -143,8 +144,8 @@ a {
 }
 
 a:hover {
-    border-color: #9AA6B2;
-    color: #F8FAFC;
+    border-color: #E29578;
+    color: #FFFFFF;
     transform: scale(1.1);
 }
 
@@ -169,7 +170,7 @@ p {
 }
 
 .button {
-    background: linear-gradient(to right, #BCCCDC, #D9EAFD);
+    background: linear-gradient(to right, #FFDDD2, #83C5BE);
     color: #333;
     padding: 15px 30px;
     font-size: 18px;
@@ -183,30 +184,11 @@ p {
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect: Retains colors without animation */
+/* Hover Effect */
 .button:hover {
-    background: linear-gradient(to right, #9AA6B2, #BCCCDC);
+    background: linear-gradient(to right, #006D77, #FFDDD2);
     transform: scale(1.05);
     color: #ffffff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-color: #BCCCDC;
+    border-color: #83C5BE;
 }
-
-
-/* Glowing Border Animation
-@keyframes glowingBorder {
-    0% {
-        border-color: #BCCCDC;
-        box-shadow: 0 0 10px rgba(155, 170, 178, 0.5), 0 0 20px rgba(155, 170, 178, 0.6);
-    }
-
-    50% {
-        border-color: #9AA6B2;
-        box-shadow: 0 0 20px rgba(155, 170, 178, 0.8), 0 0 30px rgba(155, 170, 178, 0.8);
-    }
-
-    100% {
-        border-color: #BCCCDC;
-        box-shadow: 0 0 10px rgba(155, 170, 178, 0.5), 0 0 20px rgba(155, 170, 178, 0.6);
-    }
-} */

@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
+    background: linear-gradient(135deg, #E29578 0%, #83C5BE 30%, #FFDDD2 0%, #006D77 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,17 +12,6 @@ body {
     box-sizing: border-box;
     animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
 }
-/* @keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
-    }
-    50% {
-        background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 30%, #D9EAFD 0%, #F8FAFC 100%);
-    }
-    100% {
-        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
-    }
-} */
 
 /* Header styling */
 h1 {
@@ -79,7 +68,7 @@ input[type="password"] {
     padding: 14px;
     margin-bottom: 20px;
     border-radius: 8px;
-    border: 1px solid #BCCCDC;
+    border: 1px solid #83C5BE;
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -88,21 +77,21 @@ input[type="password"] {
 /* Input fields hover effect */
 input[type="text"]:hover,
 input[type="password"]:hover {
-    border-color: #9AA6B2;
-    box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
+    border-color: #006D77;
+    box-shadow: 0 0 8px rgba(0, 109, 119, 0.6);
 }
 
 /* Input fields focus effect */
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #9AA6B2;
-    box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
+    border-color: #006D77;
+    box-shadow: 0 0 8px rgba(0, 109, 119, 0.6);
     outline: none;
 }
 
 /* Button styling */
 button {
-    background-color: #BCCCDC;
+    background-color: #FFDDD2;
     color: #333;
     padding: 16px;
     border-radius: 8px;
@@ -117,7 +106,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-    background: linear-gradient(to right, #9AA6B2, #D9EAFD);
+    background: linear-gradient(to right, #83C5BE, #EDF6F9);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -131,7 +120,7 @@ button:active {
 /* Link styling */
 a {
     text-decoration: none;
-    color:white;
+    color: #006D77;
     font-size: 14px;
     display: block;
     margin-top: 15px;
@@ -147,7 +136,7 @@ a:hover {
 
 /* Toggle button (for switching modes) styling */
 .toggle-button {
-    background-color: #BCCCDC;
+    background-color: #FFDDD2;
     color: #333;
     padding: 10px 18px;
     border-radius: 8px;
@@ -163,14 +152,14 @@ a:hover {
 
 /* Hover effect for toggle button */
 .toggle-button:hover {
-    background-color: #D9EAFD;
+    background-color: #EDF6F9;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Additional styling for video and canvas */
 video {
-    border: 1px solid #BCCCDC;
+    border: 1px solid #83C5BE;
     border-radius: 5px;
     max-width: 100%;
 }

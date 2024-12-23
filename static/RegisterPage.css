@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
+    background: linear-gradient(135deg, #FFDDD2 0%, #EDF6F9 30%, #BCCCDC 0%, #83C5BE 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@ body {
 
 /* Header styling */
 h1 {
-    color: whitesmoke;
+    color: #006D77;  /* Rich teal */
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
@@ -39,7 +39,7 @@ h1 {
 
 /* Form container styling */
 form {
-    background-color: #F8FAFC;
+    background-color: #FFDDD2;  /* Pale peach background */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -90,14 +90,14 @@ textarea {
 input[type="text"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    border-color: #9AA6B2;
+    border-color: #83C5BE;  /* Cool teal border */
     box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
 }
 
 /* Input fields focus effect */
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #9AA6B2;
+    border-color: #83C5BE;  /* Cool teal border */
     box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
     outline: none;
 }
@@ -111,7 +111,7 @@ label {
 
 /* Button styling */
 button {
-    background-color: #9AA6B2;
+    background-color: #E29578;  /* Warm brownish button color */
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -128,7 +128,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-    background: linear-gradient(to right, #BCCCDC, #D9EAFD);
+    background: linear-gradient(to right, #E29578, #FFDDD2);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: buttonHover 0.5s ease-out;
@@ -156,7 +156,7 @@ canvas {
 /* Link styling */
 a {
     text-decoration: none;
-    color: #9AA6B2;
+    color: #83C5BE;  /* Teal link color */
     font-size: 14px;
     display: block;
     margin-top: 15px;
