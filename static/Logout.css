@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif; /* Stylish font */
-    background: linear-gradient(45deg, #F8EDE3, #E2BBE9, #7776B3);
+    background: linear-gradient(45deg, #F8FAFC, #D9EAFD, #BCCCDC);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite; /* Animated gradient */
     box-sizing: border-box;
@@ -30,7 +30,7 @@ body {
 
 /* Styling for paragraphs */
 p {
-    border: 5px solid #ccc;
+    border: 5px solid #BCCCDC; /* Subtle border color */
     padding: 40px;
     width: 50%;
     background-color: #fff;
@@ -55,7 +55,7 @@ a {
     margin: 15px;
     text-decoration: none;
     color: #ffffff;
-    background-color: #007bff;
+    background-color: #9AA6B2; /* Soft muted blue */
     padding: 12px 25px;
     border-radius: 8px;
     text-align: center;
@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-    background-color: #0056b3;
+    background-color: #7776B3; /* Darker muted blue on hover */
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

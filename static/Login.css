@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,21 +12,21 @@ body {
     box-sizing: border-box;
     animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
 }
-@keyframes gradientAnimation {
+/* @keyframes gradientAnimation {
     0% {
-        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
     }
     50% {
-        background: linear-gradient(135deg, #D2F2FF 0%, #93A5D1 30%, #B0A6E5 0%, #FFBCB3 100%);
+        background: linear-gradient(135deg, #BCCCDC 0%, #9AA6B2 30%, #D9EAFD 0%, #F8FAFC 100%);
     }
     100% {
-        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+        background: linear-gradient(135deg, #F8FAFC 0%, #D9EAFD 30%, #BCCCDC 0%, #9AA6B2 100%);
     }
-}
+} */
 
 /* Header styling */
 h1 {
-    color: white;
+    color: whitesmoke;
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
@@ -49,7 +49,7 @@ h1 {
 
 /* Form container styling */
 form {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -58,7 +58,6 @@ form {
     transition: all 0.3s ease-in-out;
     opacity: 0;
     animation: formFadeIn 1s forwards;
-    
 }
 
 /* Form fade-in animation */
@@ -80,7 +79,7 @@ input[type="password"] {
     padding: 14px;
     margin-bottom: 20px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #BCCCDC;
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -89,22 +88,22 @@ input[type="password"] {
 /* Input fields hover effect */
 input[type="text"]:hover,
 input[type="password"]:hover {
-    border-color: #0a66c2;
-    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+    border-color: #9AA6B2;
+    box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
 }
 
 /* Input fields focus effect */
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #0a66c2;
-    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+    border-color: #9AA6B2;
+    box-shadow: 0 0 8px rgba(154, 166, 178, 0.6);
     outline: none;
 }
 
 /* Button styling */
 button {
-    background-color: #0a66c2;
-    color: white;
+    background-color: #BCCCDC;
+    color: #333;
     padding: 16px;
     border-radius: 8px;
     border: none;
@@ -113,15 +112,14 @@ button {
     font-size: 18px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transform: scale(1);
-    /* transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Button hover effect */
 button:hover {
-    background: linear-gradient(to right, #004182, #1c0c8f);
+    background: linear-gradient(to right, #9AA6B2, #D9EAFD);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    animation: buttonHover 0.5s ease-out;
 }
 
 /* Button active effect */
@@ -130,23 +128,10 @@ button:active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Keyframe for button hover animation */
-@keyframes buttonHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 /* Link styling */
 a {
     text-decoration: none;
-    color: white;
+    color:white;
     font-size: 14px;
     display: block;
     margin-top: 15px;
@@ -162,8 +147,8 @@ a:hover {
 
 /* Toggle button (for switching modes) styling */
 .toggle-button {
-    background-color: #32be39;
-    color: white;
+    background-color: #BCCCDC;
+    color: #333;
     padding: 10px 18px;
     border-radius: 8px;
     border: none;
@@ -178,28 +163,14 @@ a:hover {
 
 /* Hover effect for toggle button */
 .toggle-button:hover {
-    background-color: #4caf50;
+    background-color: #D9EAFD;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    animation: toggleButtonHover 0.5s ease-out;
-}
-
-/* Keyframe animation for toggle button hover effect */
-@keyframes toggleButtonHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* Additional styling for video and canvas */
 video {
-    border: 1px solid #ccc;
+    border: 1px solid #BCCCDC;
     border-radius: 5px;
     max-width: 100%;
 }
