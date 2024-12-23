@@ -1,65 +1,137 @@
-html,
-body {
+/* General styles for html and body */
+html, body {
     height: 100%;
-    /* Ensure full height for the gradient background */
     margin: 0;
-    /* Remove default margins */
     padding: 0;
-    /* Remove default padding */
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,
-            #F8EDE3 0%,
-            #7776B3 30%,
-            #9B86BD 0%,
-            #E2BBE9 100%);
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    background: linear-gradient(45deg, #F8EDE3, #E2BBE9, #7776B3);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite; /* Animated gradient */
+    box-sizing: border-box;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Add padding to the body to space content from the top */
 body {
     padding-top: 50px;
-    /* Adjust spacing as needed */
-    box-sizing: border-box;
-    /* Ensure padding doesn't affect layout */
 }
 
+/* Styling for paragraphs */
 p {
-    border: 5px solid grey;
-    padding: 50px;
-    height: auto;
+    border: 5px solid #ccc;
+    padding: 40px;
     width: 50%;
-    background-color: whitesmoke;
+    background-color: #fff;
     text-align: center;
-    margin: 50px auto 0;
-    /* Center horizontally and allow spacing from top */
-    border-radius: 10px;
-    /* Updated shadow for container */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Deeper shadow for emphasis */
-    transition: box-shadow 0.3s ease;
-    /* Smooth transition for hover effect */
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
 }
 
 p:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    /* Enhanced shadow on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
 }
 
+/* Link Styling */
 a {
     display: inline-block;
-    margin: 10px;
+    margin: 15px;
     text-decoration: none;
     color: #ffffff;
     background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 a:hover {
     background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-center {
-    display: block;
+/* Centering and card-styled layout for the content */
+.container {
+    width: 80%;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for images */
+img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations for Fade-in Effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
+    animation: fadeIn 1s ease-out;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    p {
+        width: 80%; /* Increase the width for smaller screens */
+        padding: 25px; /* Reduce padding for smaller screens */
+    }
+
+    a {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 14px;
+    }
 }

@@ -20,5 +20,19 @@
             <a href="{{ url_for('logout') }}">Logout</a>
         </div>
     </div>
+    <script>
+        // This function will be called as soon as the page loads
+        window.onload = function() {
+            // Getting the username dynamically (you should replace it with actual data)
+            const userName = "{{ user.username }}"; // This will fetch the username from your backend template
+            speakWelcomeMessage(userName);
+        }
+
+        // Function to speak the welcome message
+        function speakWelcomeMessage(name) {
+            const utterance = new SpeechSynthesisUtterance(`Welcome ${name}!`);
+            speechSynthesis.speak(utterance);
+        }
+    </script>
 </body>
 </html>

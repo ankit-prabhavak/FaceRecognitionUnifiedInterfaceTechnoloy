@@ -1,67 +1,150 @@
-html, body {
-    height: 100%; /* Ensure the gradient background spans the full viewport */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,
-            #F8EDE3 0%,
-            #7776B3 30%,
-            #9B86BD 0%,
-            #E2BBE9 100%);
-    box-sizing: border-box; /* Ensures padding doesn't affect layout dimensions */
-}
+/* Importing stylish Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@400;500;700&display=swap');
 
+/* Ensure the gradient background spans the full viewport */
+html, body {
+    height: 105%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Using Poppins font */
+    background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D2F2FF 0%, #93A5D1 30%, #B0A6E5 0%, #FFBCB3 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+}
+/* Header styling */
 h1 {
     text-align: center;
     color: #333;
-    margin: 0; /* Remove collapsing margins */
-    padding-top: 30px; /* Use padding instead of margin to space from top */
+    margin: 0;
+    padding-top: 30px;
+    font-size: 38px;
+    font-weight: 600;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for effect */
+    font-family: 'Quicksand', sans-serif; /* Using Quicksand for a modern look */
+    animation: fadeIn 1s ease-in-out;
 }
 
+/* Fade-in animation for header */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for paragraph text */
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
-    margin: 10px 0;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 1.8; /* Increased line height for better readability */
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Styling for highlighted text */
 strong {
     color: #333;
+    font-weight: 600;
 }
 
+/* Container styling for content */
 .container {
     width: 80%;
     max-width: 800px;
-    margin: 30px auto; /* Center the container and create spacing */
-    padding: 20px;
+    margin: 30px auto;
+    padding: 40px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* Slightly more shadow for depth */
+    border-radius: 16px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
 }
 
+/* Slide-in animation for container */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for images */
 img {
-    max-width: 200px;
+    max-width: 220px;
     border-radius: 50%;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Add a soft shadow effect */
+}
+
+/* Link styling */
 a {
     display: inline-block;
-    margin: 10px;
+    margin: 15px;
     text-decoration: none;
     color: #ffffff;
     background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-align: center;
-    transition: background-color 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 a:hover {
     background-color: #0056b3;
+    transform: translateY(-4px); /* Slightly more pronounced hover effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
 }
 
+/* Link container styling */
 .link-container {
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    a {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
 }

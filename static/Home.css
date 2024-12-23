@@ -1,24 +1,46 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap'); */
-
 
 @import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
 
-/* Basic body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg,
-            #F8EDE3 0%,
-            #7776B3 30%,
-            #9B86BD 0%,
-            #E2BBE9 100%);
+    background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     color: #333;
+    animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
+}
+
+/* Animation for background gradient */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D2F2FF 0%, #93A5D1 30%, #B0A6E5 0%, #FFBCB3 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+}
+
+/* Logo animation */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -29,35 +51,66 @@ body {
     margin-bottom: 10px;
     border: 5px solid #fff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    /* Add shadow behind the logo */
+    /* animation: logoAnimation 1s ease-out; */
+    position: relative;
+    z-index: 10;
 }
 
+.logo:hover {
+    cursor: pointer;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 /* Container for content */
 .container {
     background-color: #ffffff;
     padding: 40px;
     width: 450px;
-    /* Increased width for better content distribution */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    /* More subtle shadow */
     text-align: center;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-    /* Smooth hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: containerFadeIn 1s forwards;
+    position: relative;
+    z-index: 10;
 }
 
+/* Hover effect for container */
 .container:hover {
-    transform: translateY(-6px);
-    /* Slight lift effect on hover */
+    transform: translateY(-6px); /* Slight lift effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for container fade-in */
+@keyframes containerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
     color: rgb(192, 112, 192);
-    /* Professional red tone */
     font-size: 30px;
     margin-bottom: 25px;
     font-family: "Agu Display", serif;
@@ -65,45 +118,128 @@ h1 {
     text-align: center;
 }
 
-/* Styling for the links */
+h1:hover {
+    animation: textHoverAnimation 0.5s ease-out;
+}
+
+@keyframes textHoverAnimation {
+    0% {
+        color: rgb(192, 112, 192);
+        transform: scale(1);
+    }
+    100% {
+        color: #ff8585;
+        transform: scale(1.05);
+    }
+}
+
 a {
     color: #ff8585;
-    /* LinkedIn-like color for the links */
     font-size: 23px;
     text-decoration: none;
     margin-top: 15px;
     display: block;
     padding: 10px 0;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    animation: linkFadeIn 0.8s ease-in-out;
+    position: relative;
+    z-index: 10;
 }
 
-/* Hover effect for links */
+@keyframes linkFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 a:hover {
     border-color: #023b1b;
     color: #fb5f5f;
-    /* Darker shade on hover */
+    transform: scale(1.1);
 }
 
-/* Extra spacing for the paragraph */
 p {
     font-size: 18px;
     color: #555;
     margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInParagraph 1s ease-out forwards;
 }
 
-/* Style for the logo */
-.logo {
-    width: 150px;
-    /* Set the width of the logo */
-    height: 150px;
-    /* Ensure the logo is a square */
-    object-fit: cover;
-    /* Ensures the logo fits properly */
-    border-radius: 50%;
-    /* Makes the logo circular */
-    margin-bottom: 10px;
-    /* Space between the logo and the header */
-    border: 5px solid #fff;
-    /* Optional: Adds a white border around the logo */
+@keyframes fadeInParagraph {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styling */
+.button {
+background: linear-gradient(to right, rgb(239, 233, 233), rgb(243, 208, 208));
+color: rgb(18, 17, 17);
+padding: 15px 30px;
+font-size: 18px;
+font-weight: 600;
+border-radius: 30px;
+font-style: italic;
+text-decoration: none;
+display: inline-block;
+border: 2px solid transparent;
+border-color:  #fbb8b8;
+position: relative;
+/* animation: buttonPopIn 0.8s ease-out; Initial pop-in animation */
+overflow: hidden; /* To ensure the glow is contained */
+}
+
+/* Glowing Border Animation */
+@keyframes glowingBorder {
+0% {
+border-color: #ff7e5f;
+box-shadow: 0 0 10px rgba(255, 85, 85, 0.5), 0 0 20px rgba(255, 85, 85, 0.6);
+}
+50% {
+border-color: #feb47b;
+box-shadow: 0 0 20px rgba(255, 85, 85, 0.8), 0 0 30px rgba(255, 85, 85, 0.8);
+}
+100% {
+border-color: #ff7e5f;
+box-shadow: 0 0 10px rgba(255, 85, 85, 0.5), 0 0 20px rgba(255, 85, 85, 0.6);
+}
+}
+
+/* Hover Effect: Color change, glowing border effect */
+.button:hover {
+background: linear-gradient(to right, #feb47b, #ff7e5f);
+transform: scale(1.05); /* Slight zoom effect */
+color: #ffffff;
+box-shadow: 0 8px 15px rgba(255, 254, 254, 0.2);
+animation: glowingBorder 1.5s infinite ease-in-out; /* Glowing border effect */
+}
+
+/* Button pop-in animation */
+@keyframes buttonPopIn {
+0% {
+transform: scale(0);
+opacity: 0;
+}
+100% {
+transform: scale(1);
+opacity: 1;
+}
+}
+
+/* Focus Effect (glowing effect) */
+.button:focus {
+outline: none;
+box-shadow: 0 0 15px rgba(80, 206, 48, 0.8); /* Glowing effect */
 }

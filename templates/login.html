@@ -17,11 +17,11 @@
     <form action="{{ url_for('login') }}" method="POST" id="credential_login_form" style="display:block;">
         <div>
             <label for="username">Username:</label>
-            <input type="text" name="username" required>
+            <input type="text" name="username" placeholder="Enter your username" required>
         </div>
         <div>
             <label for="password">Password:</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
         </div>
         <button type="submit">Login with Credentials</button>
     </form>

@@ -1,101 +1,230 @@
-        /* Basic body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg,
-                    #F8EDE3 0%,
-                    #7776B3 30%,
-                    #9B86BD 0%,
-                    #E2BBE9 100%);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D2F2FF 0%, #93A5D1 30%, #B0A6E5 0%, #FFBCB3 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+}
 
-        /* Header styling */
-        h1 {
-            color: whitesmoke;
-            margin-bottom: 20px;
-            font-size: 32px;
-        }
+/* Header styling */
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
 
-        /* Form container styling */
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin: 20px 0;
-        }
+/* Header animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Form input styling */
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+/* Form container styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 20px 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: formFadeIn 1s forwards;
+    
+}
 
-        /* Button styling */
-        button {
-            background-color: #0a66c2;
-            color: white;
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+/* Form fade-in animation */
+@keyframes formFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        button:hover {
-            background-color: #004182;
-        }
+/* Form input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Video and Canvas styling */
-        video {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+/* Input fields hover effect */
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #0a66c2;
+    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+}
 
-        canvas {
-            display: none;
-        }
+/* Input fields focus effect */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+    outline: none;
+}
 
-        /* Link styling */
-        a {
-            text-decoration: none;
-            color: whitesmoke;
-            font-size: 14px;
-            display: block;
-            margin-top: 15px;
-            text-align: center;
-        }
+/* Button styling */
+button {
+    background-color: #0a66c2;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    /* transition: all 0.3s ease-in-out; */
+}
 
-        /* Button to toggle login modes */
-        .toggle-button {
-            background-color: #32be39;
-            color: white;
-            padding: 8px 15px;
-            /* Reduced padding for a smaller button */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            /* Reduced font size */
-            width: 10%;
-            /* Makes the button take the full width of its parent container */
-            box-sizing: content-box;
-            /* Ensures the padding doesn't add extra width */
-        }
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(to right, #004182, #1c0c8f);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: buttonHover 0.5s ease-out;
+}
 
-        .toggle-button:hover {
-            background-color: #4caf50;
-        }
+/* Button active effect */
+button:active {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe for button hover animation */
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    opacity: 1;
+}
+
+/* Toggle button (for switching modes) styling */
+.toggle-button {
+    background-color: #32be39;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 10%;
+    box-sizing: content-box;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for toggle button */
+.toggle-button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: toggleButtonHover 0.5s ease-out;
+}
+
+/* Keyframe animation for toggle button hover effect */
+@keyframes toggleButtonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Additional styling for video and canvas */
+video {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+canvas {
+    display: none;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .toggle-button {
+        padding: 12px 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}

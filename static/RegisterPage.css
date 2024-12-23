@@ -1,103 +1,220 @@
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg,
-                    #F8EDE3 0%,
-                    #7776B3 30%,
-                    #9B86BD 0%,
-                    #E2BBE9 100%);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 130vh;
-            flex-direction: column;
-            overflow-x: hidden;
-            /* Prevent horizontal overflow */
-        }
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    flex-direction: column;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in-out, gradientAnimation 8s ease-in-out infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D2F2FF 0%, #93A5D1 30%, #B0A6E5 0%, #FFBCB3 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #F8EDE3 0%, #7776B3 30%, #9B86BD 0%, #E2BBE9 100%);
+    }
+}
+/* Header styling */
+h1 {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
 
-        /* Header styling */
-        h1 {
-            color: whitesmoke;
-            margin-bottom: 0px;
-            font-size: 32px;
-        }
+/* Header fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Form container styling */
-        form {
-            background-color: #fff;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 50%;
-            max-width: 500px;
-            /* Increased width for better space */
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            box-sizing: border-box;
-            /* Ensure padding is included in width calculation */
-        }
+/* Form container styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    position: relative;
+    animation: formFadeIn 1s forwards;
+}
+.form:hover {
+    transform: translateY(-6px); /* Slight lift effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+/* Form fade-in animation */
+@keyframes formFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Form input and textarea styling */
-        input[type="text"],
-        input[type="password"],
-        textarea {
-            width: 50%;
-            padding: 9px;
-            margin-bottom: 1px;
-            border-radius: 2px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            font-size: 10px;
-        }
+/* Form input and textarea styling */
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Fix for labels overlapping or getting cut */
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+/* Input fields hover effect */
+input[type="text"]:hover,
+input[type="password"]:hover,textarea:hover {
+    border-color: #0a66c2;
+    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+}
 
-        /* Fix for textarea resizing issue */
-        textarea {
-            resize: none;
-        }
+/* Input fields focus effect */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 8px rgba(10, 102, 194, 0.6);
+    outline: none;
+}
 
-        /* Button styling */
-        button {
-            background-color: #0a66c2;
-            color: white;
-            padding: 8px;
-            border-radius: 2px;
-            border: none;
-            cursor: pointer;
-            font-size: 15px;
-            width: 100%;
-        }
+/* Label styling */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        button:hover {
-            background-color: #004182;
-        }
+/* Button styling */
+button {
+    background-color: #0a66c2;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
 
-        /* Camera and video section styling */
-        video {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(to right, #004182, #1c0c8f);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: buttonHover 0.5s ease-out;
+}
 
-        canvas {
-            display: none;
-        }
+/* Button active effect */
+button:active {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        /* Optional styling for the "Start Camera" and "Capture Image" buttons */
-        button[type="button"] {
-            background-color: #4caf50;
-            color: white;
-            margin-top: 5px;
-        }
+/* Keyframe for button hover animation */
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-        button[type="button"]:hover {
-            background-color: #45a049;
-        }
+/* Camera and video section styling */
+video {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+canvas {
+    display: none;
+}
+
+/* Optional styling for "Start Camera" and "Capture Image" buttons */
+button[type="button"] {
+    background-color: #4caf50;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Hover effect for "Start Camera" and "Capture Image" buttons */
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .toggle-button {
+        padding: 12px 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
