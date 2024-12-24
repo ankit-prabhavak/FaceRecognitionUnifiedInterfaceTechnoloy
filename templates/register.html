@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="/static/RegisterPage.css">
     <link rel="icon" type="image/png" href="/static/TitleLogo.ico">
 </head>
+
 <body>
     <h1>Register</h1>
     <form action="{{ url_for('register') }}" method="POST">
         <center>
-        <div>
-            <label for="username">Username:</label><br>
-            <input type="text" name="username" placeholder="Enter your username" required>
-        </div>
-        <div>
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" placeholder="Enter your password" required>
-        </div>
-        <div>
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
-        </div>
-        <div>
-            <label for="branch">Branch:</label><br>
-            <input type="text" id="branch" name="branch" placeholder="Enter your branch" required><br><br>
-        </div>
-        <div>
-            <label for="roll_number">Roll Number:</label><br>
-            <input type="text" id="roll_number" name="roll_number" placeholder="Enter your roll number" required><br><br>
-        </div>
-        <div>
-            <label for="address">Address:</label><br>
-            <textarea id="address" name="address" rows="2" cols="25" placeholder="Enter your address" required></textarea><br><br>
-        </div>
-        <div>
-            <label for="image_data">Capture your face:</label>
-            <textarea name="image_data" id="image_data" hidden></textarea>
-            <button type="button" onclick="startCamera()">Start Camera</button>
-            <video id="video" width="320" height="240" autoplay></video>
-            <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
-            <button type="button" onclick="captureImage()">Capture Image</button>
-        </div>
-        <button type="submit">Register</button>
-    </center>
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+            </div>
+            <div>
+                <label for="branch">Branch:</label><br>
+                <input type="text" id="branch" name="branch" placeholder="Enter your branch" required><br><br>
+            </div>
+            <div>
+                <label for="roll_number">Roll Number:</label><br>
+                <input type="text" id="roll_number" name="roll_number" placeholder="Enter your roll number"
+                    required><br><br>
+            </div>
+            <div>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" rows="2" cols="25" placeholder="Enter your address"
+                    required width: 436px;height: 76px;><br><br>
+            </div>
+            <div>
+                <label for="image_data">Capture your face:</label>
+                <textarea name="image_data" id="image_data" hidden></textarea>
+                <button type="button" onclick="startCamera()">Start Camera</button>
+                <video id="video" width="320" height="240" autoplay></video>
+                <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+                <button type="button" onclick="captureImage()">Capture Image</button>
+            </div>
+            <button type="submit">Register</button>
+        </center>
     </form>
 
     <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
     <script>
+
         // Start camera and capture face during registration
         function startCamera() {
             var video = document.getElementById('video');
@@ -70,7 +75,9 @@
 
             var dataURL = canvas.toDataURL('image/png');
             document.getElementById('image_data').value = dataURL;
+            alert("Image Captured"); // Alert to notify the user
         }
     </script>
 </body>
+
 </html>
