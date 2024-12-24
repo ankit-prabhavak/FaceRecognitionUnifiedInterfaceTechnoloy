@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #FFDDD2 0%, #EDF6F9 30%, #BCCCDC 0%, #83C5BE 100%);
+    background: linear-gradient(135deg, #E29578 0%, #83C5BE 30%, #FFDDD2 0%, #006D77 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@ body {
 
 /* Header styling */
 h1 {
-    color: #006D77;  /* Rich teal */
+    color: whitesmoke;  /* Rich teal */
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
@@ -39,7 +39,7 @@ h1 {
 
 /* Form container styling */
 form {
-    background-color: #FFDDD2;  /* Pale peach background */
+    background-color: #f1f1f1;  /* Pale peach background */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);

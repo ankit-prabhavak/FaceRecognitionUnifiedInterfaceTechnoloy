@@ -59,7 +59,7 @@ strong {
     max-width: 800px;
     margin: 30px auto;
     padding: 40px;
-    background-color: #FFDDD2; /* Pale peach background for the container */
+    background-color: #f1f1f1; /* Pale peach background for the container */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* Slightly more shadow for depth */
     border-radius: 16px;
     text-align: center;

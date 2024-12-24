@@ -38,7 +38,7 @@ h1 {
 
 /* Form container styling */
 form {
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -120,7 +120,7 @@ button:active {
 /* Link styling */
 a {
     text-decoration: none;
-    color: #006D77;
+    color: whitesmoke;
     font-size: 14px;
     display: block;
     margin-top: 15px;
