@@ -13,6 +13,30 @@ This Flask application offers a flexible and secure user authentication system. 
 - **Image Handling**: Proper security measures to sanitize and restrict image uploads.
 
 ## Project Structure
+FRUITS/
+├── instance/
+│   └── users.db
+├── static/
+│   ├── images/
+│   ├── js/
+│   │   Home.css
+│   │   Login.css
+│   │   RegisterPage.css
+│   │   Logout.css
+│   │   Welcome.css
+│   │   Logo.jpg
+│   │   TitleLogo.ico
+├── templates/
+│   ├── home.html
+│   ├── login.html
+│   ├── logout.html
+│   ├── register.html
+│   ├── welcome.html
+├── app.py
+├── local.py
+├── requirements.txt
+├── README.md
+├── venv/
 
 
 ## Requirements
