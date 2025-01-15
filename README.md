@@ -15,28 +15,28 @@ This Flask application offers a flexible and secure user authentication system. 
 ## Project Structure
 FRUITS/<br>
 ├── instance/<br>
-│   └── users.db
-├── static/
-│   ├── images/
-│   ├── js/
-│   │   ├── Home.css
-│   │   ├── Login.css
-│   │   ├── RegisterPage.css
-│   │   ├── Logout.css
-│   │   ├── Welcome.css
-│   │   ├── Logo.jpg
-│   │   └── TitleLogo.ico
-├── templates/
-│   ├── home.html
-│   ├── login.html
-│   ├── logout.html
-│   ├── register.html
-│   └── welcome.html
-├── app.py
-├── local.py
-├── requirements.txt
-├── README.md
-└── venv/
+│   └── users.db<br>
+├── static/<br>
+│   ├── images/<br>
+│   ├── js/<br>
+│   │   ├── Home.css<br>
+│   │   ├── Login.css<br>
+│   │   ├── RegisterPage.css<br>
+│   │   ├── Logout.css<br>
+│   │   ├── Welcome.css<br>
+│   │   ├── Logo.jpg<br>
+│   │   └── TitleLogo.ico<br>
+├── templates/<br>
+│   ├── home.html<br>
+│   ├── login.html<br>
+│   ├── logout.html<br>
+│   ├── register.html<br>
+│   └── welcome.html<br>
+├── app.py<br>
+├── local.py<br>
+├── requirements.txt<br>
+├── README.md<br>
+└── venv/<br>
 
 
 ## Requirements
