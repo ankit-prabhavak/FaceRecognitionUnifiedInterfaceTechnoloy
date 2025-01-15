@@ -13,7 +13,30 @@ This Flask application offers a flexible and secure user authentication system. 
 - **Image Handling**: Proper security measures to sanitize and restrict image uploads.
 
 ## Project Structure
-FRUITS/ ├── instance/ │ └── users.db # Database file for storing user data ├── static/ │ ├── images/ # Directory for storing images │ ├── js/ # Directory for JavaScript and CSS files │ │ ├── Home.css # CSS file for the home page │ │ ├── Login.css # CSS file for the login page │ │ ├── RegisterPage.css # CSS file for the register page │ │ ├── Logout.css # CSS file for the logout page │ │ ├── Welcome.css # CSS file for the welcome page │ │ ├── Logo.jpg # Logo image for the project │ │ └── TitleLogo.ico # Icon for the project ├── templates/ # Directory for HTML templates │ ├── home.html # Template for the home page │ ├── login.html # Template for the login page │ ├── logout.html # Template for the logout page │ ├── register.html # Template for the register page │ └── welcome.html # Template for the welcome page ├── app.py # Main application file (Flask app) ├── local.py # Configuration file for local settings ├── requirements.txt # List of Python dependencies ├── README.md # Project documentation (this file) └── venv/ # Virtual environment directory
+FRUITS/
+├── instance/
+│   └── users.db
+├── static/
+│   ├── images/
+│   ├── js/
+│   │   ├── Home.css
+│   │   ├── Login.css
+│   │   ├── RegisterPage.css
+│   │   ├── Logout.css
+│   │   ├── Welcome.css
+│   │   ├── Logo.jpg
+│   │   └── TitleLogo.ico
+├── templates/
+│   ├── home.html
+│   ├── login.html
+│   ├── logout.html
+│   ├── register.html
+│   └── welcome.html
+├── app.py
+├── local.py
+├── requirements.txt
+├── README.md
+└── venv/
 
 
 ## Requirements
