@@ -19,13 +19,13 @@ FRUITS/<br>
 ├── static/<br>
 │   ├── images/<br>
 │   ├── js/<br>
-│   │   ├── Home.css<br>
-│   │   ├── Login.css<br>
-│   │   ├── RegisterPage.css<br>
-│   │   ├── Logout.css<br>
-│   │   ├── Welcome.css<br>
-│   │   ├── Logo.jpg<br>
-│   │   └── TitleLogo.ico<br>
+│   ├── Home.css<br>
+│   ├── Login.css<br>
+│   ├── RegisterPage.css<br>
+│   ├── Logout.css<br>
+│   ├── Welcome.css<br>
+│   ├── Logo.jpg<br>
+│   └── TitleLogo.ico<br>
 ├── templates/<br>
 │   ├── home.html<br>
 │   ├── login.html<br>
