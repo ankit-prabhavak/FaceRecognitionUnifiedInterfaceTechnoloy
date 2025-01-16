@@ -37,6 +37,7 @@ FRUITS/<br>
 ├── requirements.txt<br>
 ├── README.md<br>
 └── venv/<br>
+│  
 
 
 ## Requirements
