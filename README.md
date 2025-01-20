@@ -37,8 +37,6 @@ FRUITS/<br>
 ├── requirements.txt<br>
 ├── README.md<br>
 └── venv/<br>
-│  
-
 
 ## Requirements
 - **Flask**: Lightweight WSGI web application framework.
