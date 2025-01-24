@@ -16,7 +16,6 @@ This Flask application offers a flexible and secure user authentication system. 
 FRUITS/<br>
 ├── instance/<br>
 │   └── users.db<br>
-
 ├── static/<br>
 │   ├── images/<br>
 │   ├── js/<br>
@@ -27,14 +26,12 @@ FRUITS/<br>
 │   ├── Welcome.css<br>
 │   ├── Logo.jpg<br>
 │   └── TitleLogo.ico<br>
-
 ├── templates/<br>
 │   ├── home.html<br>
 │   ├── login.html<br>
 │   ├── logout.html<br>
 │   ├── register.html<br>
 │   └── welcome.html<br>
-
 ├── app.py<br>
 ├── local.py<br>
 ├── requirements.txt<br>
