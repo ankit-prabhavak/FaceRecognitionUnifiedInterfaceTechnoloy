@@ -63,6 +63,7 @@ You can install the necessary dependencies by running:
     ```bash
     pip install -r requirements.txt
     ```
+    Suggestion: Create a virtual Environment and then install the dependencies.
 
 3. **Run the Flask app**:
     ```bash
