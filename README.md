@@ -48,7 +48,7 @@ FRUITS/
 - **SQLAlchemy**: ORM for interacting with the SQLite database.
 - **Werkzeug**: Provides utilities like `secure_filename` for file uploads.
 
-You can install the necessary dependencies by running:
+In order to run , install the following dependencies:
 
 
 ## Setup and Installation
