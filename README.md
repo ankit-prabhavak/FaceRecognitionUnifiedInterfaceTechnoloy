@@ -74,14 +74,14 @@ The app should now be running at `http://127.0.0.1:5000`.
 
 ## Application Flow
 
-### 1. User Registration
+### 1. User Registration:
 - When a new user registers:
   - They enter personal information (username, password, name, etc.).
   - A profile picture is captured via webcam.
   - The image is processed to generate a face encoding using the `face_recognition` library.
   - The face encoding (a unique 128-dimensional vector) is saved in the database along with other user details.
 
-### 2. User Login
+### 2. User Login:
 - **Username/Password Login**:
   - The user enters their username and password.
   - The app checks the database for matching credentials. If successful, the user is logged in and redirected to the welcome page.
@@ -90,38 +90,38 @@ The app should now be running at `http://127.0.0.1:5000`.
   - The app generates a face encoding from the captured image and compares it with the stored encodings in the database.
   - If a match is found (based on cosine similarity), the user is logged in and redirected to the welcome page.
 
-### 3. Face Recognition and Cosine Similarity
+### 3. Face Recognition and Cosine Similarity:
 - The app uses `face_recognition` to generate a unique face encoding for each user.
 - During login, the face encoding of the captured image is compared to stored encodings using cosine similarity.
 - A match is considered valid if the cosine distance between the two encodings is below a threshold (e.g., 0.8).
 
-### 4. Image Handling and Security
+### 4. Image Handling and Security:
 - Profile images are uploaded and saved to the `static/images/` folder.
 - **Sanitizing filenames**: We use `secure_filename()` from `Werkzeug` to ensure that file names are safe and free from malicious elements.
 - **Allowed file types**: Only PNG, JPG, and JPEG images are accepted to prevent harmful file uploads.
 
-### 5. Session Management and Logout
+### 5. Session Management and Logout:
 - After successful login, the user’s session is maintained using Flask’s session management.
 - On logout, the session is cleared to ensure no sensitive data remains accessible.
 
-### 6. Database and Models
+### 6. Database and Models:
 - The user data, including face encodings, are stored in an SQLite database using SQLAlchemy.
 - The **User** model defines the structure of the database, with fields such as username, password, and face_encoding.
 - **Face Encoding** is stored as a serialized object (PickleType), allowing easy retrieval and comparison.
 
-## Security Measures
+## Security Measures:
 - **Sanitizing File Names**: All uploaded images are sanitized using `secure_filename` to avoid malicious file uploads.
 - **Restricting File Types**: Only PNG, JPG, and JPEG file formats are allowed.
 - **Session Management**: The app ensures secure login sessions and clear logout procedures, protecting against unauthorized access.
 
-## Conclusion
+## Conclusion:
 This Flask app offers a versatile authentication system by combining both traditional username/password login and modern face recognition. By utilizing Flask’s session management and securing the image upload process, we ensure both user convenience and security.
 
-## Future Improvements
+## Future Improvements:-
 - Integrate email verification during registration.
 - Implement more advanced face recognition algorithms for higher accuracy.
 - Support multi-factor authentication (MFA) for enhanced security.
 
-**NOTE**:  
+**NOTE**:-  
 For setting the cosine similarity, use the `local.py` file to determine the supported threshold on your device's webcam and update that in `app.py`.
 
