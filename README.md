@@ -1,7 +1,7 @@
 # Project Details: Flask Authentication with Face Recognition
 
 ## Overview
-This Flask application offers a flexible and secure user authentication system. It supports two types of login methods: traditional username/password authentication and a more innovative face recognition system using webcam images. The system integrates both methods to provide users with multiple ways to securely access the platform.
+This Flask application offers a flexible and secure user authentication system. It supports two types of login methods: traditional username/password authentication and a more innovative face recognition system using webcam images. The system integrates both methods to provide users with multiple ways to securely access the platform.It is very efficient application for the user aunthentication.
 
 ## Features
 - **User Registration**: Users can register by entering personal details and uploading a profile image. The image is processed for face recognition.
@@ -124,4 +124,5 @@ This Flask app offers a versatile authentication system by combining both tradit
 
 **NOTE**:-  
 For setting the cosine similarity, use the `local.py` file to determine the supported threshold on your device's webcam and update that in `app.py`.
+
 
