@@ -117,12 +117,12 @@ The app should now be running at `http://127.0.0.1:5000`.
 ## Conclusion:
 This Flask app offers a versatile authentication system by combining both traditional username/password login and modern face recognition. By utilizing Flask’s session management and securing the image upload process, we ensure both user convenience and security.
 
-## Future Improvements:-
+## Future Improvements:
 - Integrate email verification during registration.
 - Implement more advanced face recognition algorithms for higher accuracy.
 - Support multi-factor authentication (MFA) for enhanced security.
 
-**NOTE**:->
+**NOTE**:-
 For setting the cosine similarity, use the `local.py` file to determine the supported threshold on your device's webcam and update that in `app.py`.
 
 
