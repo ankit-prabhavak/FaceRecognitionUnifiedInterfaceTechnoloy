@@ -42,7 +42,7 @@ FRUITS/
 ```
 
 
-## Requirements
+## Requirements:
 - **Flask**: Lightweight WSGI web application framework.
 - **face_recognition**: A Python library for face recognition, which leverages dlib.
 - **SQLAlchemy**: ORM for interacting with the SQLite database.
@@ -51,7 +51,7 @@ FRUITS/
 In order to run , install the following dependencies:
 
 
-## Setup and Installation
+## Setup and Installation:
 
 1. **Clone the repository**:
     ```bash
@@ -75,7 +75,7 @@ The app should now be running at `http://127.0.0.1:5000`.
 ## Application Flow:
 
 ### 1. User Registration:
-- When a new user registers:
+- When a new user registers
   - They enter personal information (username, password, name, etc.).
   - A profile picture is captured via webcam.
   - The image is processed to generate a face encoding using the `face_recognition` library.
@@ -122,7 +122,7 @@ This Flask app offers a versatile authentication system by combining both tradit
 - Implement more advanced face recognition algorithms for higher accuracy.
 - Support multi-factor authentication (MFA) for enhanced security.
 
-**NOTE**:-  
+**NOTE**:->
 For setting the cosine similarity, use the `local.py` file to determine the supported threshold on your device's webcam and update that in `app.py`.
 
 
