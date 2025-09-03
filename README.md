@@ -72,7 +72,7 @@ In order to run , install the following dependencies:
 
 The app should now be running at `http://127.0.0.1:5000`.
 
-## Application Flow
+## Application Flow:
 
 ### 1. User Registration:
 - When a new user registers:
