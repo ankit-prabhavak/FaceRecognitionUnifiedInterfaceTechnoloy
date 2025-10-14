@@ -12,6 +12,9 @@ This Flask application offers a flexible and secure user authentication system. 
 - **Session Management**: Secure session handling to keep users logged in across pages and ensure secure logouts.
 - **Image Handling**: Proper security measures to sanitize and restrict image uploads.
 
+## Preview
+![Web Page Screenshot](static/images/home.png)
+
 ## Project Structure
 
 ```text
